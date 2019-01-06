@@ -1,3 +1,4 @@
+
 .box {
 	width: 50px;
 	height: 50px;
@@ -11,10 +12,20 @@
 	  background-color: #fff;
 	}
 	&.start {
-	  background-color: blue;
+	  background: url("/assets/knight.png") no-repeat;
+	  background-size: 100%;
+	  &.black {
+	    background: url("/assets/knight.png") black no-repeat;
+	    background-size: 100%;
+	  }
 	}
 	&.end {
-	  background-color: red;
+	  background: url("/assets/knight.png") no-repeat;
+	  background-size: 100%;
+	  &.black {
+	    background: url("/assets/knight.png") black no-repeat;
+	    background-size: 100%;
+	  }
 	}
 	i {
 	  border: solid yellow;

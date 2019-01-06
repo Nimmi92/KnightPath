@@ -6,6 +6,7 @@ import { Component,
     ComponentRef,
     ComponentFactory } from '@angular/core';
 import { BoxComponent } from '../box/box.component';
+import { LoaderComponent } from '../shared/components/loader/loader.component';
 import { KnightService } from '../shared/services/knight.service';
 
 @Component({
@@ -39,6 +40,9 @@ startGame(val) {
 	  document.getElementById(this.start).classList.add('start');
 	}
 	else {
+      if(this.end && this.knightPath) {
+      	this.knightPath = '';
+      }
 	  this.end = val;
 	  const boxes = document.querySelectorAll('.box');
 	  for(let i=0;i<boxes.length;i++) {
@@ -69,8 +73,9 @@ mapClassName(data) {
 markPoints(data) {
 	for(let i=1;i<data.length;i++) {
 	  document.getElementById(data[i]).classList.add('point');
-	  if(document.getElementById(data[i]).childNodes[2].childNodes[0]) 
-	    document.getElementById(data[i]).childNodes[2].childNodes[0].innerHTML = i;
+	  let ele = <HTMLElement> document.getElementById(data[i]).childNodes[2].childNodes[0];
+	  if(ele) 
+	    ele.innerText = i.toString();
 	}
 }
 
@@ -104,6 +109,28 @@ ngAfterContentInit() {
 	 	   this.createComponent(i,j)
 	 	}
 	}	
+}
+
+clearBoard() {
+	if(this.start) {
+	  document.querySelector('.start').classList.remove('start');
+	  this.start = '';
+	}
+	if(this.end) {
+	  document.querySelector('.end').classList.remove('end');
+	  this.end = '';
+	}
+	if(this.knightPath) {
+	  this.knightPath = '';
+	}
+	const boxes = document.querySelectorAll('.box');
+	  for(let i=0;i<boxes.length;i++) {
+	  	boxes[i].classList.remove('up');
+	  	boxes[i].classList.remove('down');
+	  	boxes[i].classList.remove('left');
+	  	boxes[i].classList.remove('right');
+	  	boxes[i].classList.remove('point');
+	  }
 }
 
 

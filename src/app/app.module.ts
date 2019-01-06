@@ -5,12 +5,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { BoardComponent } from './board/board.component';
 import { BoxComponent } from './box/box.component';
+import { LoaderComponent } from './shared/components/loader/loader.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BoardComponent,
-    BoxComponent
+    BoxComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,

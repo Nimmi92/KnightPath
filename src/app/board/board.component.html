@@ -1,8 +1,13 @@
-<p>Start point: {{start}}</p>
-<p>End point: {{end}}</p>
-<p>Knight path: {{knightPath}}</p>
-<p>Knight travel path: {{travelPath}}</p>
-<div class="board">
-<template #boxcontainer>
-</template>
+<div>
+	<p><span *ngIf="start; else selectStart">Starting point: {{start}}</span></p>
+	<ng-template #selectStart>Please select starting point</ng-template>
+	<p><span *ngIf="end; else selectEnd">Ending point: {{end}}</span></p>
+	<ng-template #selectEnd>Please select ending point</ng-template>
+	<p *ngIf="knightPath">Knight path: {{knightPath}}</p>
+	<button (click)="clearBoard()">Clear</button>
+	<div class="board relative">
+		<div *ngIf="start && end && !knightPath"><loader-component></loader-component></div>
+		<template #boxcontainer>
+		</template>
+	</div>
 </div>

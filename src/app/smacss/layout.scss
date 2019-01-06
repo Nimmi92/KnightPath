@@ -1,0 +1,78 @@
+body {
+	margin: 0 10%;
+	text-align: center;
+}
+.l-main {
+	width: 80%;
+	margin: 20px auto;
+	text-align: center;
+}
+h1 {
+	font-size: 2em;
+	margin-bottom: 1em;
+}
+.margin-auto {
+	margin: 0 auto;
+}
+.margin-10 {
+	margin: 10px;
+}
+.margin-20 {
+	margin: 20px;
+}
+.margin-40 {
+	margin: 40px;
+}
+.margin-10p {
+	margin: 10%;
+}
+.noXMargin {
+	margin-left: 0;
+	margin-right: 0;
+}
+.noYMargin {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.autoXMargin {
+	margin-left: auto;
+	margin-right: auto;
+}
+.marginBtmOnly {
+	margin-top: 0;
+	margin-left: 0;
+	margin-right: 0;
+}
+.width-50p {
+	width: 50%;
+}
+.width-80p {
+	width: 80%;
+}
+.width-90p {
+	width: 90%;
+}
+.width-100p {
+	width: 100%;
+}
+.padding-10 {
+	padding: 10px;
+}
+.padding-20 {
+	padding: 20px;
+}
+.absolute {
+	position: absolute;
+}
+.relative {
+	position: relative;
+}
+.of-hidden {
+	overflow: hidden;
+}
+.btm-0 {
+	bottom: 0;
+}
+.d-inlineBlock {
+	display: inline-block;
+}

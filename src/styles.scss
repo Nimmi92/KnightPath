@@ -1,4 +1,7 @@
-* {
-	margin: 0;
-	padding: 0;
-}
+@import "./app/smacss/base.scss";
+@import "./app/smacss/layout.scss";
+@import "./app/smacss/modules.scss";
+@import "./app/smacss/state.scss";
+@import "./app/smacss/theme.scss";
+
+

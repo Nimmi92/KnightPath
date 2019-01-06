@@ -1,0 +1,15 @@
+$color-red : #f00;
+$color-black : #000;
+$color-white : #fff;
+$font-sans: sans-serif;
+$color-grey: #ccc;
+
+body {
+	font-family: $font-sans;
+	color: $color-black;
+	font-size: 16px;
+}
+.bg-grey {
+	background-color: $color-grey;
+}
+
